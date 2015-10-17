@@ -2,7 +2,7 @@
   "name": "appium-repl",
   "version": "0.0.2",
   "description": "Simple REPL (Read-eval-print Loop) for controlling mobile apps through Appium",
-  "preferGlobal" true,
+  "preferGlobal": true,
   "bin": {
     "appium-repl": "./lib/appium-repl.js"
   },
