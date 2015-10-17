@@ -2,7 +2,7 @@ Simple REPL (Read-eval-print Loop) for controlling mobile apps through [Appium](
 
 Interactively control your apps programmatically, test various JSON WireProtocol bindings.
 
-To get started enter app name along with caps in caps.json
+To get started enter app name along with caps in .appium-repl
 
 eg
 
@@ -13,30 +13,25 @@ eg
     "app": "<app name>",
     "version": "7.1",
     "newCommandTimeout": 100000,
-    "autoLaunch" : "flase",
+    "autoLaunch" : "false",
     "platformName":"iOS",
     "device": "iPhone Simulator"
   }
 ```
 
-Run your appium server and then run.
+Run your appium server and then run `appium-repl`
 
-Then `node .`.
+If you have more than one app in your config file, you will need to enter the name of application you want to test.
 
-Enter the name of application you want to test.
-
-Then you can call your driver commands with passing handler for call back. It comes by a in built handler
-called handler which needs to be passed.
-
+Then its a matter of accessing `driver` directly
 eg.
 
 ```
->>driver.elementByClassName("android.widget.Button",handler);
+>>elm = driver.elementByClassName("android.widget.Button");
  > CALL elementByClassName("android.widget.Button")
-undefined
 >> > RESPONSE elementByClassName("android.widget.Button") {"ELEMENT":"1"}
-Returned in current
->>current.click(console.log());
+>>elm.click(console.log());
 ```
+
 If you press tab it will show you all possible options that are available. If a driver command returns a array
 then current would become an array.
