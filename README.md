@@ -2,7 +2,7 @@ Simple REPL (Read-eval-print Loop) for controlling mobile apps through [Appium](
 
 Interactively control your apps programmatically, test various JSON WireProtocol bindings.
 
-To get started enter app name along with caps in caps.json
+To get started enter app name along with caps in .appium-repl
 
 eg
 
@@ -13,15 +13,13 @@ eg
     "app": "<app name>",
     "version": "7.1",
     "newCommandTimeout": 100000,
-    "autoLaunch" : "flase",
+    "autoLaunch" : "false",
     "platformName":"iOS",
     "device": "iPhone Simulator"
   }
 ```
 
-Run your appium server and then run.
-
-Then `node .`.
+Run your appium server and then run `appium-repl`
 
 Enter the name of application you want to test.
 
